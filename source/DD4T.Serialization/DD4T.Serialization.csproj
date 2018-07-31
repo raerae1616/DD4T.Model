@@ -9,7 +9,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>DD4T.Serialization</RootNamespace>
-    <AssemblyName>DD4T.Serialization</AssemblyName>
+    <AssemblyName>DD4T.Serialization-CONCURRENCY_HOTFIX</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
@@ -58,7 +58,7 @@
     </Compile>
     <Compile Include="BaseSerializerService.cs" />
     <Compile Include="Compressor.cs" />
-    <Compile Include="JSONSerializerService.cs" />
+    <Compile Include="JSONSerializerService-HOTFIX-PATCH-to-v2.2.2.cs" />
     <Compile Include="Properties\SpecificAssemblyInfo.cs" />
     <Compile Include="SerializationFormats.cs" />
     <Compile Include="SerializationProperties.cs" />
@@ -94,10 +94,10 @@
   <Target Name="AfterBuild">
   </Target>
   -->
-  <Import Project="..\..\DD4T Model.Targets" />
+  <!--<Import Project="..\..\DD4T Model.Targets" />
   <Target Name="AfterBuild">
     <CallTarget Targets="Package" />
     <Message Text="Installing package to local NuGet repo" Importance="high" Condition="'$(NUGET_LOCALREPO)' != ''" />
     <CallTarget Targets="Install" Condition="'$(NUGET_LOCALREPO)' != ''" />
-  </Target>
+  </Target>-->
 </Project>
