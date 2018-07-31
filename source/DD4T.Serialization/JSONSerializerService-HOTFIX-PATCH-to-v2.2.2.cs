@@ -7,6 +7,13 @@ using System.IO;
 
 namespace DD4T.Serialization
 {
+     /// <summary>
+    /// BBernard - July 2018
+    /// HOTFIXED this class with concurrency fixes from DD4T v2.2.2.
+    /// 
+    /// Documented in detail in this GitHub Issue:
+    /// https://github.com/dd4t/DD4T.Model/issues/35
+    /// </summary>
     public class JSONSerializerService : BaseSerializerService
     {
 
@@ -49,7 +56,7 @@ namespace DD4T.Serialization
             return result;
         }
 
-        public override T Deserialize<T>(string input) 
+        public override T Deserialize<T>(string input)
         {
             // NOTE: important exception situation!!
             // if the requested type is IComponentPresentation, there is a possiblity that the data 
@@ -64,7 +71,7 @@ namespace DD4T.Serialization
             using (var inputValueReader = new StringReader(input))
             {
                 JsonTextReader reader = new JsonTextReader(inputValueReader);
-                if (typeof(T).Name.Contains("ComponentPresentation") 
+                if (typeof(T).Name.Contains("ComponentPresentation")
                     && !input.Contains("ComponentTemplate"))
                 {
                     // handle the exception situation where we are asked to deserialize into a CP but the data is actually a Component

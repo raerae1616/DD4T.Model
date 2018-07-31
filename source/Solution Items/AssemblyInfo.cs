@@ -26,8 +26,8 @@ using System.Runtime.InteropServices;
 //      Minor Version
 //      Revision (anything under 100 is beta or pre-release)
 //      The last digit is left to 0
-//
-[assembly: AssemblyVersion("2.1.0.0")]
-[assembly: AssemblyFileVersion("2.1.0.0")]
-[assembly: AssemblyInformationalVersion("2.1.0")]
+//  
+[assembly: AssemblyVersion("2.0.7.0")]
+[assembly: AssemblyFileVersion("2.0.7.0")]
+[assembly: AssemblyInformationalVersion("2.0.7-CONCURRENCY-HOTFIX-BBernard")]
 [assembly: AssemblyProduct("DD4T")]
