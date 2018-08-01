@@ -1,5 +1,5 @@
 # DD4T.Model HOTFIXED for Concurrency Issues
-### Branch_2.0.7-CONCURRENCY_HOTFIX
+### Merged from Branch_2.0.7-CONCURRENCY_HOTFIX
 Provides a **HOTFIXED** version of the DD4T.Serialization assembly adapted from DD4T v2.0.7 -- the main version used by most versions of DXA. It contains patched logic ported from 
 DD4T v2.2.2 (fixed in [this commit #ff96b15](https://github.com/dd4t/DD4T.Model/commit/ff96b151f06f242989449aa9f84ae7408f358db6)), to address the concurrency/locking issues that yield highly unstable environments for both Content Management and Content Delivery. This is key dependency of 
 DXA v1.3-v1.8, all of which suffer from the instability and concurrency issues.
